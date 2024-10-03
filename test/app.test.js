@@ -11,7 +11,7 @@ describe('GET /api/', () => {
       .get('/api/')
       .end((err, res) => {
         expect(res.status).to.equal(200);
-        expect(res.text).to.equal('API is running');
+        expect(res.body.message).to.equal('API is running');
         done();
       });
   });
